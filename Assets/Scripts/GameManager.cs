@@ -6,21 +6,24 @@ public class GameManager : MonoBehaviour
 {
     public int scoreP1, scoreP2;
     public ScoreText scoreText_p1, scoreText_p2;
-            public GameObject ball;
 
 
-    public void OnScoreZoneReached (int id)
+    public void OnScoreZoneReached(int id)
     {
 
-        this.ball = GameObject.Find("ball");
-
         if (id == 1)
-        {
-            if (ball.transform.position.x < 0)
-                scoreP1++;
-            else
-                scoreP2++;
-            
-        }
+            scoreP1++;
+        if (id == 2)
+            scoreP2++;
+
+        UpdateScores();
+
     }
+
+    private void UpdateScores()
+    {
+        scoreText_p1.SetScore(scoreP1);
+        scoreText_p2.SetScore(scoreP2);
+    }
+
 }
