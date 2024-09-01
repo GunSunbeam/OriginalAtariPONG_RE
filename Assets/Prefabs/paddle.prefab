@@ -47,6 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79b3f7226ae441419f73288b4cf5800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 4617671102320248061}
+  paddle: {fileID: 0}
+  paddleSpeed: 0.07
+  upKey: 0
+  downKey: 0
 --- !u!50 &4617671102320248061
 Rigidbody2D:
   serializedVersion: 4
@@ -73,7 +78,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 7
 --- !u!212 &802505146195406992
 SpriteRenderer:
   m_ObjectHideFlags: 0

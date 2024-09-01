@@ -6,8 +6,8 @@ public class Ball : MonoBehaviour
 {
   public GameManager gameManager;
   public Rigidbody2D rb2d;
-  public float maxInitialAngle = 1.0f;
-  public float moveSpeed = 1.0f;
+  public float maxInitialAngle = 0.8f;
+  public float moveSpeed = 5.0f;
   public float startX = 0f;
   public float maxStartY = 4.5f;
 
@@ -31,11 +31,22 @@ public class Ball : MonoBehaviour
     transform.position = position;
   }
 
+  // private void OnTriggerEnter2D (Collider2D collision)
+  // {
+  //   ScoreZone scoreZone = collision.GetComponent<ScoreZone>();
+  //   if(scoreZone)
+  //   {
+  //     gameManager.OnScoreZoneReached(scoreZone.id);
+  //     ResetBall();
+  //     InitialPush();
+  //   }
+  // }
+
   private void OnTriggerEnter2D (Collider2D collision)
   {
-    ScoreZone scoreZone = collision.GetComponent<ScoreZone>();
-    if(scoreZone)
+    if(collision.gameObject.tag == "scorezone")
     {
+      ScoreZone scoreZone = collision.GetComponent<ScoreZone>();
       gameManager.OnScoreZoneReached(scoreZone.id);
       ResetBall();
       InitialPush();
