@@ -16,10 +16,6 @@ public class Ball : MonoBehaviour
     InitialPush();   
   }
 
-  private void Awake()
-  {
-    gameManager = new GameManager();
-  }
 
   private void InitialPush()
   {
@@ -40,7 +36,7 @@ public class Ball : MonoBehaviour
     ScoreZone scoreZone = collision.GetComponent<ScoreZone>();
     if(scoreZone)
     {
-      gameManager.OnScoreZoneReached();
+      gameManager.OnScoreZoneReached(scoreZone.id);
       ResetBall();
       InitialPush();
     }

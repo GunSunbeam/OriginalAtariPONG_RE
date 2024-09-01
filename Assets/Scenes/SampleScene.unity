@@ -1215,6 +1215,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2341348760623927099, guid: 2803fe402cfb8804d8ba7ae19f0916d2, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5454817567344544592, guid: 2803fe402cfb8804d8ba7ae19f0916d2, type: 3}
       propertyPath: id
       value: 1
@@ -1753,7 +1757,6 @@ MonoBehaviour:
   scoreP2: 0
   scoreText_p1: {fileID: 1431236040}
   scoreText_p2: {fileID: 1893804130}
-  ball: {fileID: 2065255903}
 --- !u!4 &870615454
 Transform:
   m_ObjectHideFlags: 0
@@ -3076,6 +3079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2341348760623927099, guid: 2803fe402cfb8804d8ba7ae19f0916d2, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5454817567344544592, guid: 2803fe402cfb8804d8ba7ae19f0916d2, type: 3}
       propertyPath: id
       value: 2
@@ -3662,10 +3669,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a221f6a58dbb446a1ba658b1bfa119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 870615453}
   rb2d: {fileID: 2065255904}
   maxInitialAngle: 0.67
-  moveSpeed: 5
+  moveSpeed: 8
   startX: 0
   maxStartY: 4.8
 --- !u!1 &2070632201

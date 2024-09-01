@@ -10,14 +10,13 @@ public class GameManager : MonoBehaviour
 
     public void OnScoreZoneReached(int id)
     {
-
         if (id == 1)
             scoreP1++;
+            
         if (id == 2)
             scoreP2++;
 
         UpdateScores();
-
     }
 
     private void UpdateScores()
